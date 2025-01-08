@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor - courses</title>
+  <link rel="stylesheet" href="course.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MENTOR</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li class="dropdown">
+          <a href="#">Dropdown</a>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="get-started">Get Started</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>courses</h1>
+    <p>
+      Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint 
+      voluptates consequatur ut a odio voluptatem. Sit dolorem debitis veritatis natus dolores.
+    </p>
+  </section>
+
+  <section class="breadcrumb">
+    <a href="#">Home </a ><a href="#">/ courses</a>
+    <p></p>
+  </section>
+
+
+
+
+
+
+
+  <section class="popular-courses">
+    <div class="section-header">
+      <p class="subtitle">COURSES</p>
+      <h2>POPULAR COURSES</h2>
+    </div>
+    <div class="courses-grid">
+      <!-- Course Card 1 -->
+      <div class="course-card">
+        <div class="course-image parallax" style="background-image: url('course-1.jpg');"></div>
+        <div class="course-content">
+          <span class="badge" style="background-color: #4caf50;">Web Development</span>
+          <span class="price">$169</span>
+          <h3>Website Design</h3>
+          <p>
+            Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.
+          </p>
+          <div class="course-meta">
+            <span>Antonio</span>
+            <div class="stats">
+              <span>👥 50</span>
+              <span>❤️ 65</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Course Card 2 -->
+      <div class="course-card">
+        <div class="course-image parallax" style="background-image: url('course-2.jpg');"></div>
+        <div class="course-content">
+          <span class="badge" style="background-color: #03a9f4;">Marketing</span>
+          <span class="price">$250</span>
+          <h3>Search Engine Optimization</h3>
+          <p>
+            Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.
+          </p>
+          <div class="course-meta">
+            <span>Lana</span>
+            <div class="stats">
+              <span>👥 35</span>
+              <span>❤️ 42</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Course Card 3 -->
+      <div class="course-card">
+        <div class="course-image parallax" style="background-image: url('course-3.jpg');"></div>
+        <div class="course-content">
+          <span class="badge" style="background-color: #8bc34a;">Content</span>
+          <span class="price">$180</span>
+          <h3>Copywriting</h3>
+          <p>
+            Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.
+          </p>
+          <div class="course-meta">
+            <span>Brandon</span>
+            <div class="stats">
+              <span>👥 20</span>
+              <span>❤️ 85</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+ <!-- footer -->
+
+ <footer class="footer">
+  <div class="container footer-grid">
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h3>Mentor</h3>
+      <p>A108 Adam Street<br>New York, NY 535022</p>
+      <p><strong>Phone:</strong> +1 5589 55488 55<br>
+      <strong>Email:</strong> info@example.com</p>
+      <div class="social-icons">
+        <a href="#">X</a>
+        <a href="#">F</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+    
+    <!-- Useful Links -->
+    <div class="footer-section">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>
+    </div>
+    
+    <!-- Our Services -->
+    <div class="footer-section">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Product Management</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Graphic Design</a></li>
+      </ul>
+    </div>
+    
+    <!-- Newsletter -->
+    <div class="footer-section">
+      <h4>Our Newsletter</h4>
+      <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; Copyright <strong>Mentor</strong>. All Rights Reserved</p>
+    <p>Designed by <a href="#">Team</a> | Distributed by <a href="#">Us</a></p>
+  </div>
+</footer>
+
+<script>
+let datafromapi;
+function apigetdata(){
+  fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((res)=> res.json())
+  .then((result)=>{
+    dataFromApi  =  result;
+    console.log("result",result)
+  })
+}
+apiGetData();
+</script>
+
